@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>simon's card game</title>
+		<!--'href' means where the file is
+		'type' tells the browser it is css 
+		'rel' tell the browser it is a stylesheet-->
+		<link href="style.css" type="text/css" rel="stylesheet" />
+		<!--adds the google font to the page-->
+		<link href="https://fonts.googleapis.com/css?family=Uncial+Antiqua&display=swap" rel="stylesheet" />		
+	</head>
+	<body>
+		<div id="container">
+			<div id="welcome">
+				<h1>Simon's Game</h1>
+				<input type="button" id="startGame" value="Start Game" />
+			</div>
+
+			<div id="theGame" class="hidden">
+				<ul id="gridContainer">
+					<li class="gridSquare" id="grid0">0</li>
+					<li class="gridSquare" id="grid1">0</li>
+					<li class="gridSquare" id="grid2">0</li>
+					
+					<li class="gridSquare" id="grid3">0</li>
+					<li class="gridSquare" id="grid4">0</li>
+					<li class="gridSquare" id="grid5">0</li>
+					
+					<li class="gridSquare" id="grid6">0</li>
+					<li class="gridSquare" id="grid7">0</li>
+					<li class="gridSquare" id="grid8">0</li>
+				</ul>
+				
+				<ul id="inventory">
+				
+				</ul>
+				<div id="trash">
+				
+				</div>
+				
+				<ul id="monsterDeck">
+				
+				</ul>
+				
+				<ul id="roomDeck">
+				
+				</ul>
+				
+				<div id="healthBar">
+					<div class="inner">
+					</div>
+				</div>
+				
+				<div id="currancy">
+				</div>
+				
+				<ul id="hand">
+					<li class="draw0"></li>
+					<li class="draw1"></li>
+					<li class="draw2"></li>
+				</ul>
+				
+				<ul id= "diceContainer">
+					<li class ="dice0"></li>
+					<li class="dice1"></li>
+				</ul>
+				
+				<button id="rollDiceButton">Roll Dice</button>
+								
+			</div>
+		</div>
+		<script src="jquery.js"></script>
+		<script src="engine.js"></script>
+	</body>
+</html>
