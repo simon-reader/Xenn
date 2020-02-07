@@ -59,6 +59,11 @@ $(document).ready(function() {
 			$("#theGame").fadeIn(500);
 		}, 500);
 	});
+		$("#rollDiceButton").on("click", function(e) {
+			e.preventDefault();
+			var output0 = createRandom("d4");
+			$(".dice0").html(output0);
+		});
 	
 	var rollDice = function(min, max) {
 		var randomNumber = Math.floor(Math.random() * max) + min;
