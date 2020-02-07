@@ -137,7 +137,10 @@ body {
 	width: 120px;
 	height: 75px;
 	background-color: orange;
-	display: inline-block;
+	/* use this below if "display: inline-block;" breaks */
+	float: left;
+	margin: 5px;
+	list-style-type: none;
 }
 #rollDiceButton {
 	position: absolute;
