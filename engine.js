@@ -48,7 +48,6 @@ $(document).ready(function() {
 	},
 	];
 		
-	
 	// click function to fade out intro button&title
 	$("#startGame").on("click", function(e) {
 		e.preventDefault();
@@ -56,13 +55,13 @@ $(document).ready(function() {
 		
 		//wrapping code in setTimeout will delay the execution by the number at the end
 		setTimeout(function() {
-			$("#theGame").fadeIn(500);
+			$("#classSelect").fadeIn(500);
 		}, 500);
 	});
 		$("#rollDiceButton").on("click", function(e) {
 			e.preventDefault();
 			var output0 = createRandom("d4");
-			$(".dice0").html(output0);
+			$(".dice0").html("<img src='images/dice" + output0 + ".png' />")
 		});
 	
 	var rollDice = function(min, max) {

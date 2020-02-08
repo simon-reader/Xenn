@@ -1,0 +1,22 @@
+1. add a new div called classSelection or something with the classes inside styled how you want
+2. change the current start game click function to show the classSelection div instead of startgame
+3. add a new click function that handles clicking on the classes to start the game
+
+- the classSelection div you create should be "display: none" by default so you can fadeIn
+- you can duplicate the startGame click function and change the affected id's inside to show a different div
+- you can assign a click event to *every* div by using CSS classes, so:
+   $(".bert").on("click", function(e) {
+  would select every div with the class of bert and give it the same click
+
+
+
+classcard animation..
+
+
+.aCard {
+    transition: 0.3s linear;
+}
+
+.aCard:hover {
+    transform: perspective(500px) rotate(0deg) skew(4deg, 8deg);
+}
