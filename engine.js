@@ -58,6 +58,34 @@ $(document).ready(function() {
 			$("#classSelect").fadeIn(500);
 		}, 500);
 	});
+	
+	$(".warrior").on("click", function(e) {
+		e.preventDefault();
+		$("#classSelect").fadeOut(500);
+			
+		setTimeout(function() {
+			$("#theGame").fadeIN(500);
+		}, 500);
+	});
+	
+		$(".thief").on("click", function(e) {
+		e.preventDefault();
+		$("#classSelect").fadeOut(500);
+			
+		setTimeout(function() {
+			$("#theGame").fadeIN(500);
+		}, 500);
+	});
+	
+		$(".rogue").on("click", function(e) {
+		e.preventDefault();
+		$("#classSelect").fadeOut(500);
+			
+		setTimeout(function() {
+			$("#theGame").fadeIN(500);
+		}, 500);
+	});
+	
 		$("#rollDiceButton").on("click", function(e) {
 			e.preventDefault();
 			var output0 = createRandom("d4");
