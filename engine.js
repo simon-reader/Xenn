@@ -80,7 +80,6 @@ $(document).ready(function() {
 	
 	$(".playerClass").on("click", function(e) {
 		e.preventDefault();
-		$("#classSelect").fadeOut(500);
 		
 		var myName = prompt("What is your name hero?")
 		// added new error variable, zero is no error
@@ -89,9 +88,14 @@ $(document).ready(function() {
 		player.name = myName;
 		//check if the player.name length is under one characterSet
 		//if it IS under one character, then set "error to "1"
-		if (player.name.length < 1 || player.name == null) {
+		if (!player.name) {
 			error = 1;
+		} else {
+			if (player.name.length < 1) {
+				error = 1;
+			}
 		}
+
 		
 		if ($(this).hasClass("warrior")) {
 			//warrior stats here
@@ -132,7 +136,7 @@ $(document).ready(function() {
 				$("#theGame").fadeIn(500);
 			}, 500);
 		} else {
-		alert("You didn't enter a name...");
+			alert("You didn't enter a name...");
 		}
 	});
 	
