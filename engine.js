@@ -152,9 +152,27 @@ $(document).ready(function() {
 	
 		$("#rollDiceButton").on("click", function(e) {
 			e.preventDefault();
+			
 			var output0 = createRandom("d4");
 			$(".dice0").html("<img src='images/dice" + output0 + ".png' />")
+			
+			var output2 = createRandom("d4");
+			$(".dice2").html("<img src='images/dice" + output2 + ".png' />")
+			
 		});
+		
+		var rollCombatDice = function() {
+			var sides = "🛡🛡💢💢   ";
+			var whichSide = Math.floor(Math.random() * sides.length);
+			return sides[whichSide];
+			
+			var output1 = rollCombatDice();
+			$(".dice1").html(output1);
+			
+			var output3 = rollCombatDice();
+			$(".dice3").html(output3);
+			
+		};
 	
 	var rollDice = function(min, max) {
 		var randomNumber = Math.floor(Math.random() * max) + min;

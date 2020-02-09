@@ -64,16 +64,16 @@ body {
 	float: left;
 	margin-left: 3px;
 }
-#monsterDeck {
+#roomDeck {
 	width: 180px;
 	height: 260px;
-	background-color: #AAEBED;
+	background-color: #5FB0CB;
 	float: left;
 	margin-left: 5px;
 	border-radius: 10px;
 	margin-top: 5px;
 }
-#roomDeck {
+#monsterDeck {
 	width: 180px;
 	height: 260px;
 	background-color: #B4E4A3;
@@ -127,11 +127,11 @@ body {
 }
 #diceContainer {
 	position: absolute;
-	width: 300px;
+	width: 350px;
 	height: 80px;
 	background-color: black;
 	top: 440px;
-	left: 675px;
+	left: 650px;
 }
 .dice0, .dice1, .dice2, .dice3 {
 	width: 60px;
@@ -148,8 +148,19 @@ body {
 }
 .dice0, .dice1 {
 	border-style: solid;
-	border-width: 2px 2px 2px 2px;
+	border-width: 3px 3px 3px 3px;
 	border-color: #5FB0CB;
+}
+.dice2, .dice3 {
+	border-style: solid;
+	border-width: 3px 3px 3px 3px;
+	border-color: #B4E4A3;
+}
+.dice0:hover, .dice1:hover {
+	box-shadow: 0px 0px 10px #5FB0CB;
+}
+.dice2:hover, .dice3:hover {
+	box-shadow: 0px 0px 10px #B4E4A3;
 }
 #rollDiceButton {
 	position: absolute;
