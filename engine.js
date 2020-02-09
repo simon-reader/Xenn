@@ -1,16 +1,26 @@
+var map = [
+	[0,0,2],
+	[1,2,2],
+	[0,2,0]
+];
+
 var characterTemplate = {
 	name: "",
 	hand: [],
+	lives: 3,
 	weapon: 0,
 	armour: 0,
-	inventory: [],
 	stats: {
 		str: 0,
 		dex: 0,
 		agi: 0,
 		wis: 0,
 		lck: 0,
-	}
+	},
+	position: {
+		x: 0,
+		y: 0
+	},
 };
 
 var player = null;

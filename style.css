@@ -127,24 +127,29 @@ body {
 }
 #diceContainer {
 	position: absolute;
-	width: 260px;
+	width: 300px;
 	height: 80px;
 	background-color: black;
 	top: 440px;
 	left: 675px;
 }
-.dice0, .dice1 {
-	width: 120px;
-	height: 75px;
-	background-color: orange;
+.dice0, .dice1, .dice2, .dice3 {
+	width: 60px;
+	height: 60px;
+	background-color: black;
 	/* use this below if "display: inline-block;" breaks */
 	float: left;
 	margin: 5px;
 	list-style-type: none;
 }
-.dice0 img {
+.dice0 img, .dice1 img, .dice2 img, .dice3 img {
 	width: 60px;
 	height: 60px;
+}
+.dice0, .dice1 {
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #5FB0CB;
 }
 #rollDiceButton {
 	position: absolute;
