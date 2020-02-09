@@ -1,4 +1,5 @@
 var characterTemplate = {
+	name: "",
 	hand: [],
 	weapon: 0,
 	armour: 0,
@@ -82,7 +83,15 @@ $(document).ready(function() {
 		$("#classSelect").fadeOut(500);
 		
 		var myName = prompt("What is your name hero?")
+		// added new error variable, zero is no error
+		var error = 0;
+		//setting player name
 		player.name = myName;
+		//check if the player.name length is under one characterSet
+		//if it IS under one character, then set "error to "1"
+		if (player.name.length < 1 || player.name == null) {
+			error = 1;
+		}
 		
 		if ($(this).hasClass("warrior")) {
 			//warrior stats here
@@ -106,16 +115,25 @@ $(document).ready(function() {
 			player.stats.wis = 4;
 			player.stats.lck = 5;
 		}
-		
-		$(this).children(".title").html(player.name);
-		
-		$(this).clone().appendTo("#theGame");
-		
-		$("#theGame .playerClass").removeClass("playerClass").addClass("selectedPlayer");
+		//we check if error is zero
+		//if the error IS zero, then we continue
+		//otherwise we alert() - "you didn't enter a name"
+		if (error == 0) {
 			
-		setTimeout(function() {
-			$("#theGame").fadeIn(500);
-		}, 500);
+			$("#classSelect").fadeOut(500);
+			
+			$(this).children(".title").html(player.name);
+		
+			$(this).clone().appendTo("#theGame");
+		
+			$("#theGame .playerClass").removeClass("playerClass").addClass("selectedPlayer");
+			
+			setTimeout(function() {
+				$("#theGame").fadeIn(500);
+			}, 500);
+		} else {
+		alert("You didn't enter a name...");
+		}
 	});
 	
 		$("#rollDiceButton").on("click", function(e) {
