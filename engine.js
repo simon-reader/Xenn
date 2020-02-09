@@ -6,6 +6,7 @@ var map = [
 
 var characterTemplate = {
     name: "",
+	health: 100,
     hand: [],
     lives: 3,
     weapon: 0,
@@ -190,21 +191,25 @@ $(document).ready(function() {
             return rollDice(1, 4);
         };
     };
+	
+}); // document ready
 
-    var runAnimation = function() {
+var updateHealth = function(amount) {
+	
+	//grab the character health and set mooveTO to it
+	var moveTo = character.health;
+	
+	//if amount exists, set moveTo to that instead
+	if (amount) {
+		moveTo = amount;
+	}
+	
+	//animate!!
+	$("#healthBar .inner").animate({
+		"width": moveTo + "%"
+	}, 350);
+};
 
-        $("#healthBar .inner").animate({
-            width: "0%"
-        }, 1000, function() {
-            $(this).animate({
-                width: "100%"
-            }, 1000);
-        });
 
-    };
 
-    //merp
-
-    runAnimation();
-
-});
+	//updateHealth(50)

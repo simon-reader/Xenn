@@ -34,6 +34,7 @@ body {
 #startGame:hover {
 	background-color: yellow;
 	color: darkred;
+	cursor: pointer;
 }
 .hidden {
 	display: none;
@@ -56,9 +57,11 @@ body {
 }
 .gridSquare:hover {
 	opacity: 0.5;
+	cursor: pointer;
 }
 #gridContainer li:hover {
 	background-color: #B4E4A3;
+	cursor: pointer;
 }
 #inventory {
 	width: 230px;
@@ -81,6 +84,7 @@ body {
 }
 #roomDeck:hover {
 	box-shadow: 0px 0px 20px #5FB0CB;
+	cursor: pointer;
 }
 #monsterDeck {
 	width: 180px;
@@ -96,6 +100,7 @@ body {
 }
 #monsterDeck:hover {
 	box-shadow: 0px 0px 20px #B4E4A3;
+	cursor: pointer;
 }
 #trash {
 	width: 133px;
@@ -146,6 +151,7 @@ body {
 }
 .draw0:hover, .draw1:hover, .draw2:hover {
 	box-shadow: 0px 0px 20px #5FB0CB;
+	cursor: pointer;
 }
 #diceContainer {
 	position: absolute;
@@ -185,9 +191,11 @@ body {
 }
 .dice0:hover, .dice1:hover {
 	box-shadow: 0px 0px 10px #5FB0CB;
+	cursor: pointer;
 }
 .dice2:hover, .dice3:hover {
 	box-shadow: 0px 0px 10px #B4E4A3;
+	cursor: pointer;
 }
 #rollDiceButton {
 	position: absolute;
@@ -230,6 +238,7 @@ body {
 .playerClass:hover {
 	transform: perspective(500px) rotate(20deg) skew(4deg, 8deg);
 	box-shadow: 10px 10px 10px gold;
+	cursor: pointer;
 }
 .title {
 	text-align: center;
