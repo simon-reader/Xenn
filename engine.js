@@ -168,7 +168,7 @@ $(document).ready(function() {
 		});
 		
 		var rollCombatDice = function() {
-			var sides = "🛡🛡💢💢   ";
+			var sides = "SSCC   ";
 			var whichSide = Math.floor(Math.random() * sides.length);
 			return sides[whichSide];
 			

@@ -156,6 +156,12 @@ body {
 	border-width: 3px 3px 3px 3px;
 	border-color: #B4E4A3;
 }
+.dice1, .dice3 {
+	color: red;
+	font-size: 40px;
+	text-align: center;
+	font-family: Arial;
+}
 .dice0:hover, .dice1:hover {
 	box-shadow: 0px 0px 10px #5FB0CB;
 }
