@@ -1,4 +1,22 @@
+var characterTemplate = {
+	hand: [],
+	weapon: 0,
+	armour: 0,
+	inventory: [],
+	stats: {
+		str: 0,
+		dex: 0,
+		agi: 0,
+		wis: 0,
+		lck: 0,
+	}
+};
+
+var player = null;
+
 $(document).ready(function() {
+	
+	player = characterTemplate;
 	
 	var roomCards = [
     {
@@ -59,30 +77,35 @@ $(document).ready(function() {
 		}, 500);
 	});
 	
-	$(".warrior").on("click", function(e) {
+	$(".playerClass").on("click", function(e) {
 		e.preventDefault();
 		$("#classSelect").fadeOut(500);
+		
+		if ($(this).hasClass("warrior")) {
+			//warrior stats here
+			player.stats.str = 7;
+			player.stats.dex = 5;
+			player.stats.agi = 4;
+			player.stats.wis = 2;
+			player.stats.lck = 5;
+		} else if ($(this).hasClass("thief")) {
+			//thief stats here
+			player.stats.str = 4;
+			player.stats.dex = 6;
+			player.stats.agi = 6;
+			player.stats.wis = 3;
+			player.stats.lck = 5;
+		} else if ($(this).hasClass("rogue")) {
+			//rogue stats here
+			player.stats.str = 5;
+			player.stats.dex = 6;
+			player.stats.agi = 5;
+			player.stats.wis = 4;
+			player.stats.lck = 5;
+		}
 			
 		setTimeout(function() {
-			$("#theGame").fadeIN(500);
-		}, 500);
-	});
-	
-		$(".thief").on("click", function(e) {
-		e.preventDefault();
-		$("#classSelect").fadeOut(500);
-			
-		setTimeout(function() {
-			$("#theGame").fadeIN(500);
-		}, 500);
-	});
-	
-		$(".rogue").on("click", function(e) {
-		e.preventDefault();
-		$("#classSelect").fadeOut(500);
-			
-		setTimeout(function() {
-			$("#theGame").fadeIN(500);
+			$("#theGame").fadeIn(500);
 		}, 500);
 	});
 	
