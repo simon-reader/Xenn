@@ -174,26 +174,17 @@ body {
 	background: radial-gradient(circle, rgba(125,35,35,1) 80%, rgba(249,0,0,1) 100%);
 	transition: 0.3s linear;
 }
-.warrior:hover {
-	transform: perspective(500px) rotate(20deg) skew(4deg, 8deg);
-	box-shadow: 10px 10px 10px gold;
-}
 .thief {
 	background: rgb(27,83,44);
 	background: radial-gradient(circle, rgba(27,83,44,1) 80%, rgba(0,249,37,1) 100%);
 	transition: 0.3s linear;
 }
-.thief:hover {
-	transform: perspective(500px) rotate(20deg) skew(4deg, 8deg);
-	box-shadow: 10px 10px 10px gold;
-}
-
 .rogue {
 	background: rgb(82,35,125);
 	background: radial-gradient(circle, rgba(82,35,125,1) 80%, rgba(83,0,249,1) 100%);
 	transition: 0.3s linear;
 }
-.rogue:hover {
+.playerClass:hover {
 	transform: perspective(500px) rotate(20deg) skew(4deg, 8deg);
 	box-shadow: 10px 10px 10px gold;
 }
@@ -248,7 +239,11 @@ body {
 	border-style: solid;
 	border-width: 4px 4px 4px 4px;
 }
-
+.selectedPlayer {
+	position: absolute;
+	top: 625px;
+	left: -10px;
+}
 	
 	
 	

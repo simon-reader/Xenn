@@ -81,6 +81,9 @@ $(document).ready(function() {
 		e.preventDefault();
 		$("#classSelect").fadeOut(500);
 		
+		var myName = prompt("What is your name hero?")
+		player.name = myName;
+		
 		if ($(this).hasClass("warrior")) {
 			//warrior stats here
 			player.stats.str = 7;
@@ -103,6 +106,12 @@ $(document).ready(function() {
 			player.stats.wis = 4;
 			player.stats.lck = 5;
 		}
+		
+		$(this).children(".title").html(player.name);
+		
+		$(this).clone().appendTo("#theGame");
+		
+		$("#theGame .playerClass").removeClass("playerClass").addClass("selectedPlayer");
 			
 		setTimeout(function() {
 			$("#theGame").fadeIn(500);
