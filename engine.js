@@ -150,6 +150,21 @@ $(document).ready(function() {
 		}
 	});
 	
+	var rollCombatDice = function() {
+			var sides = [
+			"&#128737;", //shield
+			"&#128737;", //shield
+			"&#128162;", //critical
+			"&#128162;", //critical "&128481;" sword
+			"",
+			"",
+			"",
+		];
+			var whichSide = Math.floor(Math.random() * sides.length);
+			return sides[whichSide];
+			
+		};
+	
 		$("#rollDiceButton").on("click", function(e) {
 			e.preventDefault();
 			
@@ -165,14 +180,7 @@ $(document).ready(function() {
 			var output3 = rollCombatDice();
 			$(".dice3").html(output3);
 			
-		});
-		
-		var rollCombatDice = function() {
-			var sides = "SSCC   ";
-			var whichSide = Math.floor(Math.random() * sides.length);
-			return sides[whichSide];
-			
-		};
+		});	
 	
 	var rollDice = function(min, max) {
 		var randomNumber = Math.floor(Math.random() * max) + min;
