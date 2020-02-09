@@ -7,7 +7,7 @@ body {
 	background-color: black;	
 }
 #container {
-	width: 1005px;
+	width: 1100px;
 	height: 100vh;
 }
 #container h1 {
@@ -39,15 +39,18 @@ body {
 	display: none;
 }
 #gridContainer {
-	width: 610px;
-	height: 610px;
+	width: 640px;
+	height: 620px;
 	float: left;
 }
 #gridContainer li {
 	width: 200px;
 	height: 200px;
-	background-color: #D32F2F;
+	background-color: black;
 	display: inline-block;
+	border-style: solid;
+	border-width: 3px 3px 3px 3px;
+	border-color: #D32F2F;
 	margin-bottom: 4px;
 	transition: 0.3s linear;
 }
@@ -67,20 +70,32 @@ body {
 #roomDeck {
 	width: 180px;
 	height: 260px;
-	background-color: #5FB0CB;
+	background-color: black;
 	float: left;
 	margin-left: 5px;
 	border-radius: 10px;
+	border-style: solid;
+	border-width: 3px 3px 3px 3px;
+	border-color: #5FB0CB;
 	margin-top: 5px;
+}
+#roomDeck:hover {
+	box-shadow: 0px 0px 20px #5FB0CB;
 }
 #monsterDeck {
 	width: 180px;
 	height: 260px;
-	background-color: #B4E4A3;
+	background-color: black;
 	float: left;
 	margin-left: 5px;
 	border-radius: 10px;
+	border-style: solid;
+	border-width: 3px 3px 3px 3px;
+	border-color: #B4E4A3;
 	margin-top: 5px;
+}
+#monsterDeck:hover {
+	box-shadow: 0px 0px 20px #B4E4A3;
 }
 #trash {
 	width: 133px;
@@ -93,7 +108,8 @@ body {
 	position: absolute;
 	width: 400px;
 	height: 12px;
-	top: 615px;
+	top: 630px;
+	left: 10px;
 	background-color: black;
 }
 #healthBar .inner {
@@ -106,24 +122,30 @@ body {
 	position: absolute;
 	width: 190px;
 	height: 24px;
-	top: 615px;
-	left: 415px;
+	top: 630px;
+	left: 425px;
 	background-color: gold;
 }
 #hand {
 	position: absolute;
-	width: 404px;
+	width: 424px;
 	height: 204px;
-	top: 645px;
-	left: 200px;
+	top: 670px;
+	left: 210px;
 	background-color: black;
 }
 .draw0, .draw1, .draw2 {
 	width: 130px;
 	height: 200px;
 	display: inline-block;
-	background-color: #5FB0CB;
+	background-color: black;
 	border-radius: 10px;
+	border-style: solid;
+	border-width: 3px 3px 3px 3px;
+	border-color: #5FB0CB;
+}
+.draw0:hover, .draw1:hover, .draw2:hover {
+	box-shadow: 0px 0px 20px #5FB0CB;
 }
 #diceContainer {
 	position: absolute;
@@ -131,7 +153,7 @@ body {
 	height: 80px;
 	background-color: black;
 	top: 440px;
-	left: 650px;
+	left: 685px;
 }
 .dice0, .dice1, .dice2, .dice3 {
 	width: 60px;
@@ -160,7 +182,6 @@ body {
 	color: red;
 	font-size: 40px;
 	text-align: center;
-	font-family: Arial;
 }
 .dice0:hover, .dice1:hover {
 	box-shadow: 0px 0px 10px #5FB0CB;
@@ -171,7 +192,7 @@ body {
 #rollDiceButton {
 	position: absolute;
 	top: 520px;
-	left: 765px;
+	left: 805px;
 	margin-top: 5px;
 }
 #classSelect {
@@ -263,8 +284,26 @@ body {
 }
 .selectedPlayer {
 	position: absolute;
-	top: 625px;
+	top: 650px;
 	left: -10px;
+}
+#statContainer {
+	position: absolute;
+	width: 415px;
+	height: 40px;
+	background-color: black;
+	top: 890px;
+	left: 210px;
+}
+.strBox, .dexBox, .agiBox, .wisBox, .lckBox {
+	width: 64px;
+	height: 33px;
+	background-color: #d1d1cb;
+	float: left;
+	margin-left: 15px;
+	margin-top: 2px;
+	list-style-type: none;
+	
 }
 	
 	
