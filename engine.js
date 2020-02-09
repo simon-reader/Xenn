@@ -108,25 +108,25 @@ $(document).ready(function() {
 
         if ($(this).hasClass("warrior")) {
             //warrior stats here
-            player.stats.str = 7;
-            player.stats.dex = 5;
-            player.stats.agi = 4;
-            player.stats.wis = 2;
-            player.stats.lck = 5;
+            player.stats.str = 7 + rollDice(1, 6);
+            player.stats.dex = 5 + rollDice(1, 6);
+            player.stats.agi = 4 + rollDice(1, 6);
+            player.stats.wis = 2 + rollDice(1, 6);
+            player.stats.lck = 5 + rollDice(1, 6);
         } else if ($(this).hasClass("thief")) {
             //thief stats here
-            player.stats.str = 4;
-            player.stats.dex = 6;
-            player.stats.agi = 6;
-            player.stats.wis = 3;
-            player.stats.lck = 5;
+            player.stats.str = 4 + rollDice(1, 6);
+            player.stats.dex = 6 + rollDice(1, 6);
+            player.stats.agi = 6 + rollDice(1, 6);
+            player.stats.wis = 3 + rollDice(1, 6);
+            player.stats.lck = 5 + rollDice(1, 6);
         } else if ($(this).hasClass("rogue")) {
             //rogue stats here
-            player.stats.str = 5;
-            player.stats.dex = 6;
-            player.stats.agi = 5;
-            player.stats.wis = 4;
-            player.stats.lck = 5;
+            player.stats.str = 5 + rollDice(1, 6);
+            player.stats.dex = 6 + rollDice(1, 6);
+            player.stats.agi = 5 + rollDice(1, 6);
+            player.stats.wis = 4 + rollDice(1, 6);
+            player.stats.lck = 5 + rollDice(1, 6);
         }
         //we check if error is zero
         //if the error IS zero, then we continue
@@ -140,7 +140,11 @@ $(document).ready(function() {
             $(this).clone().appendTo("#theGame");
 
             $("#theGame .playerClass").removeClass("playerClass").addClass("selectedPlayer");
-
+			
+			updateStats();
+			
+			updateHealth();
+			
             setTimeout(function() {
                 $("#theGame").fadeIn(500);
             }, 500);
@@ -197,7 +201,7 @@ $(document).ready(function() {
 var updateHealth = function(amount) {
 	
 	//grab the character health and set mooveTO to it
-	var moveTo = character.health;
+	var moveTo = player.health;
 	
 	//if amount exists, set moveTo to that instead
 	if (amount) {
@@ -208,8 +212,22 @@ var updateHealth = function(amount) {
 	$("#healthBar .inner").animate({
 		"width": moveTo + "%"
 	}, 350);
+	if (moveTo > 75) {
+		$("#healthBar .inner").css("background-color","green");
+	} else if (moveTo > 50) {
+		$("#healthBar .inner").css("background-color","yellow");
+	} else if (moveTo > 25) {
+		$("#healthBar .inner").css("background-color","orange");
+	} else if (moveTo > 10) {
+		$("#healthBar .inner").css("background-color","red");
+	}
 };
+//updateHealth(50)
 
-
-
-	//updateHealth(50)
+var updateStats = function() {
+		$(".strBox").html(player.stats.str);
+		$(".dexBox").html(player.stats.dex);
+		$(".agiBox").html(player.stats.agi);
+		$(".wisBox").html(player.stats.wis);
+		$(".lckBox").html(player.stats.lck);
+	};
