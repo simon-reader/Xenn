@@ -225,9 +225,9 @@ var updateHealth = function(amount) {
 //updateHealth(50)
 
 var updateStats = function() {
-		$(".strBox").html(player.stats.str);
-		$(".dexBox").html(player.stats.dex);
-		$(".agiBox").html(player.stats.agi);
-		$(".wisBox").html(player.stats.wis);
-		$(".lckBox").html(player.stats.lck);
+		$(".strBox").html("STR: " + player.stats.str);
+		$(".dexBox").html("DEX: " + player.stats.dex);
+		$(".agiBox").html("AGI: " + player.stats.agi);
+		$(".wisBox").html("WIS: " + player.stats.wis);
+		$(".lckBox").html("LCK: " + player.stats.lck);
 	};

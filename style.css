@@ -306,13 +306,22 @@ body {
 }
 .strBox, .dexBox, .agiBox, .wisBox, .lckBox {
 	width: 64px;
-	height: 33px;
-	background-color: #d1d1cb;
+	height: 26px;
+	background-color: black;
 	float: left;
 	margin-left: 15px;
 	margin-top: 2px;
 	list-style-type: none;
 	
+}
+#statContainer li {
+	text-align: center;
+	padding-top: 4px;
+	font-size: 14px;
+	color: yellow;
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: yellow;
 }
 	
 	
