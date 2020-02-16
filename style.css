@@ -341,6 +341,9 @@ body {
 	height: 115px;
 	background-color: #f2f2eb;
 	border-radius: 10px;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: black;
 	margin: 4px;
 	top: 129px;
 }
@@ -362,6 +365,9 @@ body {
 	height: 115px;
 	background-color: #f2f2eb;
 	border-radius: 10px;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: black;
 	margin: 4px;
 	top: 129px;
 }
