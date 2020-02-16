@@ -347,6 +347,30 @@ body {
 	margin: 4px;
 	top: 129px;
 }
+.roomCardBack .monsterIcon {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: #bd453c;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: black;
+	top: 215px;
+	left: 3px;
+}
+.roomCardBack .treasureIcon {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: gold;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: black;
+	top: 215px;
+	left: 137px;
+}
 .monsterCardBack {
 	position: absolute;
 	width: 175px;
@@ -370,6 +394,30 @@ body {
 	border-color: black;
 	margin: 4px;
 	top: 129px;
+}
+.monsterCardBack .attackIcon {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: red;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: black;
+	top: 215px;
+	left: 137px;
+}
+.monsterCardBack .armourIcon {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: silver;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: black;
+	top: 215px;
+	left: 3px;
 }
 	
 	
